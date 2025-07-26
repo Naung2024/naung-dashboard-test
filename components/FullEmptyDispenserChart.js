@@ -3,12 +3,28 @@ import {
   ResponsiveContainer, CartesianGrid, LabelList 
 } from "recharts";
 import { fullEmptyDispenserData } from "../data/fullEmptyDispenser";
-import React, { useState } from "react";
+
+import React, { useState, useEffect, useRef } from "react";
 
 export default function FullEmptyDispenserChart() {
   
-  const [open, setOpen] = useState(false); // control dropdown open
+  const [open, setOpen] = useState(false);
   const toggleDropdown = () => setOpen(!open);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false); 
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div style={styles.card}>
@@ -63,7 +79,7 @@ export default function FullEmptyDispenserChart() {
       </div>
       
       {/* Dropdown Wrapper */}
-      <div style={styles.selectContainer}>
+      <div style={styles.selectContainer} ref={dropdownRef}>
         {open && (
           <div style={styles.dropdown}>
             <label style={styles.label}>
@@ -107,6 +123,7 @@ const styles = {
   
   selectBox: {
     width: "80%",
+    marginTop: "20px",
     padding: "20px 10px",
     fontSize: "16px",
     fontWeight: "600",
@@ -121,9 +138,8 @@ const styles = {
   },
   dropdown: {
     position: "absolute",
-    bottom: "20px", 
     left: 0,
-    width: "80%",
+    width: "90%",
     padding: "20px",
     borderRadius: "2px",
     backgroundColor: "#ffffff",

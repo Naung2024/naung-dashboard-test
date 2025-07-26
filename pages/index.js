@@ -29,6 +29,7 @@ const styles = {
     padding: "20px",
     background: "#f5faff",
     minHeight: "100vh",
+    fontFamily: "san-serif"
   },
   grid: {
     display: "grid",
