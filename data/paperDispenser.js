@@ -1,0 +1,18 @@
+export const paperDispenser = [
+    { date: "01 sept", vFold: 100, jumbo: 70 },
+    { date: "02 sept", vFold: 80, jumbo: 68 },
+    { date: "03 sept", vFold: 75, jumbo: 50 },
+    { date: "04 sept", vFold: 70, jumbo: 30 },
+    { date: "05 sept", vFold: 65, jumbo: 10 },
+    { date: "06 sept", vFold: 67, jumbo: 5 },
+    { date: "07 sept", vFold: 60, jumbo: 70 },
+    { date: "08 sept", vFold: 35, jumbo: 68 },
+    { date: "09 sept", vFold: 30, jumbo: 50 },
+    { date: "10 sept", vFold: 0, jumbo: 30 },
+    { date: "11 sept", vFold: 99, jumbo: 10 },
+    { date: "12 sept", vFold: 95, jumbo: 5 },
+    { date: "13 sept", vFold: 90, jumbo: 50 },
+    { date: "14 sept", vFold: 70, jumbo: 30 },
+    { date: "15 sept", vFold: 60, jumbo: 10 },
+    { date: "16 sept", vFold: 50, jumbo: 5 },
+];

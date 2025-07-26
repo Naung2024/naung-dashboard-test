@@ -1,0 +1,18 @@
+export const binWasteLevelData = [
+  { date: '01 sept', value: 0 },
+  { date: '02 sept', value: 15 },
+  { date: '03 sept', value: 20 },
+  { date: '04 sept', value: 20 },
+  { date: '05 sept', value: 60 },
+  { date: '06 sept', value: 90 },
+  { date: '07 sept', value: 0 },
+  { date: '08 sept', value: 13 },
+  { date: '09 sept', value: 23 },
+  { date: '10 sept', value: 25 },
+  { date: '11 sept', value: 26 },
+  { date: '12 sept', value: 58 },
+  { date: '13 sept', value: 60 },
+  { date: '14 sept', value: 80 },
+  { date: '15 sept', value: 90 },
+  { date: '16 sept', value: 0 },
+];
